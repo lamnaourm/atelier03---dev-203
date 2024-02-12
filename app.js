@@ -17,7 +17,19 @@ app.get('/livre/:id', (req, res) => {
     if(books.filter(e => e.id == id).length  == 0)
         res.status(404).send('Id de livre Incorrect')
     else 
-        res.status(201).json(livres)
+        res.status(201).json(books.filter(e => e.id == id))
+})
+
+app.post('/livre', (req, res) => {
+
+})
+
+app.put('/livre', (req, res) => {
+    
+})
+
+app.delete('/livre', (req, res) => {
+    
 })
 
 app.listen(3000, (err) => {
